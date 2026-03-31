@@ -1,0 +1,56 @@
+{
+  "dataset": "vlm_fix_base_release",
+  "games": [
+    "connect4",
+    "dots_boxes",
+    "reversi",
+    "tictactoe"
+  ],
+  "states_per_game": {
+    "connect4": 300,
+    "dots_boxes": 300,
+    "reversi": 300,
+    "tictactoe": 300
+  },
+  "images_total": 1200,
+  "annotations_total": 9600,
+  "filters": {
+    "render_variant": "canonical",
+    "prompt_variant": "standard",
+    "prompt_type": "direct"
+  },
+  "counts_by_game_rule_target_order": {
+    "connect4|inverse|loser|image_first": 300,
+    "connect4|inverse|loser|text_first": 300,
+    "connect4|inverse|winner|image_first": 300,
+    "connect4|inverse|winner|text_first": 300,
+    "connect4|standard|loser|image_first": 300,
+    "connect4|standard|loser|text_first": 300,
+    "connect4|standard|winner|image_first": 300,
+    "connect4|standard|winner|text_first": 300,
+    "dots_boxes|inverse|loser|image_first": 300,
+    "dots_boxes|inverse|loser|text_first": 300,
+    "dots_boxes|inverse|winner|image_first": 300,
+    "dots_boxes|inverse|winner|text_first": 300,
+    "dots_boxes|standard|loser|image_first": 300,
+    "dots_boxes|standard|loser|text_first": 300,
+    "dots_boxes|standard|winner|image_first": 300,
+    "dots_boxes|standard|winner|text_first": 300,
+    "reversi|inverse|loser|image_first": 300,
+    "reversi|inverse|loser|text_first": 300,
+    "reversi|inverse|winner|image_first": 300,
+    "reversi|inverse|winner|text_first": 300,
+    "reversi|standard|loser|image_first": 300,
+    "reversi|standard|loser|text_first": 300,
+    "reversi|standard|winner|image_first": 300,
+    "reversi|standard|winner|text_first": 300,
+    "tictactoe|inverse|loser|image_first": 300,
+    "tictactoe|inverse|loser|text_first": 300,
+    "tictactoe|inverse|winner|image_first": 300,
+    "tictactoe|inverse|winner|text_first": 300,
+    "tictactoe|standard|loser|image_first": 300,
+    "tictactoe|standard|loser|text_first": 300,
+    "tictactoe|standard|winner|image_first": 300,
+    "tictactoe|standard|winner|text_first": 300
+  }
+}

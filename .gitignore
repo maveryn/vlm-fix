@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+runs/
+results/
+data/generated/
+analysis/steering-vlmfix/outputs/
+analysis/steering_vlmfix/outputs/
+*.parquet
+*.xlsx
