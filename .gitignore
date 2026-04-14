@@ -1,0 +1,30 @@
+# Local environments and secrets
+.env
+.venv/
+venv/
+ENV/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local outputs
+runs/
+results/
+samples/
+data/
+dataset/
+hf_export/
+analysis/steering-vlmfix/outputs/
+analysis/steering_vlmfix/outputs/
+
+# Generated data artifacts
+*.parquet
+*.xlsx
+
+# Local editor / OS noise
+.DS_Store

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VLM-Fix Interactive Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/demo.css?v=a4dce70c71" />
+  </head>
+  <body>
+    <main class="demo-shell">
+      <header class="demo-header">
+        <a class="demo-back-link" href="../">Back to project page</a>
+        <p class="demo-kicker">Interactive Demo</p>
+        <h1>VLM-Fix Interactive Demo</h1>
+          <p class="demo-subtitle">Inspect 1,200 canonical board states with Base, Alias, and SemAlias prompt blocks.</p>
+          <p class="demo-intro">Each demo example is one board state. For that state, the page shows the paired standard and inverse prompts for Base, Alias, and SemAlias, along with direct responses from GPT-5.2, Molmo2 4B, Molmo2 8B, and Qwen3-VL 32B.</p>
+        <div id="demo-summary-pills" class="demo-summary-pills"></div>
+        <div id="demo-summary-breakdown" class="demo-summary-breakdown" hidden></div>
+      </header>
+
+      <section class="demo-panel">
+        <div class="demo-toolbar">
+          <div id="demo-mode-tabs" class="demo-mode-tabs" role="tablist" aria-label="Demo modes"></div>
+          <div id="demo-toolbar-meta" class="demo-toolbar-meta">
+            <span id="demo-index" class="demo-index">Example 1</span>
+            <div class="demo-actions">
+              <button id="demo-random" type="button">Random Example</button>
+              <button id="demo-next" type="button">Next</button>
+            </div>
+          </div>
+        </div>
+
+        <section class="demo-stage">
+          <div id="demo-stage-layout" class="demo-stage-layout">
+            <div class="demo-stage-media">
+              <div id="demo-media" class="demo-media"></div>
+            </div>
+            <div class="demo-stage-copy">
+              <h2 id="demo-title"></h2>
+              <p id="demo-prompt" class="demo-prompt"></p>
+              <div id="demo-prompt-panels" class="demo-prompt-panels" hidden></div>
+              <section class="demo-section demo-stage-answer" id="demo-compare-answer-section" hidden>
+                <h4>Ground truth</h4>
+                <div id="demo-compare-answer" class="demo-answer-card"></div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section id="demo-compare-panel" class="demo-mode-panel" hidden>
+          <div class="demo-section-head">
+            <div>
+              <p class="demo-section-kicker">Compare</p>
+              <h3>Model responses</h3>
+            </div>
+            <div id="demo-model-selector" class="demo-model-selector"></div>
+          </div>
+          <div id="demo-compare-predictions" class="demo-predictions compare-grid"></div>
+        </section>
+
+        <section id="demo-quiz-panel" class="demo-mode-panel" hidden>
+          <div class="demo-section-head">
+            <div>
+              <p class="demo-section-kicker">Quiz</p>
+              <h3>Your answer</h3>
+            </div>
+            <div id="demo-quiz-stats" class="demo-quiz-stats"></div>
+          </div>
+
+          <form id="demo-form" class="demo-form">
+            <div id="demo-input-area"></div>
+            <div class="demo-actions demo-actions--quiz">
+              <button id="demo-check" type="submit">Check Answer</button>
+            </div>
+          </form>
+
+          <div id="demo-feedback" class="demo-feedback" hidden></div>
+
+          <section class="demo-section" id="demo-answer-section" hidden>
+            <h4>Ground truth</h4>
+            <div id="demo-answer" class="demo-answer-card"></div>
+          </section>
+
+          <section class="demo-section" id="demo-quiz-model-section" hidden>
+            <div class="demo-section-head compact">
+              <div>
+                <p class="demo-section-kicker">Model</p>
+                <h4 id="demo-quiz-model-heading">Model response</h4>
+              </div>
+            </div>
+            <div id="demo-quiz-model-card" class="demo-predictions single-card"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      window.PAPERPAGE_DEMO = {
+        examplesUrl: "../assets/demo/examples.json?v=8aec2873d8",
+        showModelPredictions: true,
+        showCompareModelSelector: false,
+        showSummaryBreakdown: false,
+        modes: ["compare"],
+        defaultMode: "compare",
+        availableModels: ["GPT-5.2", "Molmo2 4B", "Molmo2 8B", "Qwen3-VL 32B"],
+        defaultCompareModels: ["GPT-5.2", "Molmo2 4B", "Molmo2 8B", "Qwen3-VL 32B"],
+        quizRevealModel: "GPT-5.2"
+      };
+    </script>
+    <script src="../static/demo.js?v=271ba6e525"></script>
+  </body>
+</html>

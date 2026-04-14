@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beyond Perception Errors: Semantic Fixation in Large Vision-Language Models | Project Page</title>
+  <meta name="description" content="Large vision-language models (VLMs) often rely on familiar semantic priors, but existing evaluations do not cleanly separate perception failures from rule-mapping failures. We study this behavior as semantic fixation: preserving a default interpretation even when the prompt specifies an alternative, equally valid mapping. To isolate this effect, we introduce VLM-Fix, a controlled benchmark over four abstract strategy games that evaluates identical terminal board states under paired standard and inverse rule formulations. Across 14 open and closed VLMs, accuracy consistently favors standard rules, revealing a robust semantic-fixation gap. Prompt interventions support this mechanism: neutral alias prompts substantially narrow the inverse-rule gap, while semantically loaded aliases reopen it. Post-training is strongly rule-aligned: training on one rule improves same-rule transfer but hurts opposite-rule transfer, while joint-rule training improves broader transfer. To test external validity beyond synthetic games, we evaluate analogous defamiliarization interventions on VLMBias and observe the same qualitative pattern. Finally, late-layer activation steering partially recovers degraded performance, indicating that semantic-fixation errors are at least partly editable in late representations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="static/index.css?v=16b4e844b6">
+</head>
+<body>
+  <section class="hero paperpage-hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="paperpage-hero-header">
+          <h1 class="title is-1 publication-title">Beyond Perception Errors: Semantic Fixation in Large Vision-Language Models</h1>
+            <div class="publication-authors">
+                <span class="author-block">
+                  Md Tanvirul Alam
+                </span>            </div>
+            <div class="paperpage-affiliations">
+                <span class="paperpage-affiliation">
+                  Rochester Institute of Technology
+                </span>            </div>
+
+          <div class="publication-links">
+                <span class="link-block">
+                  <a href="assets/pdfs/main.pdf?v=a0d7465ab1" class="button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/maveryn/vlm-fix" class="button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="demo/" class="button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-link"></i>
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/maveryn/vlm-fix" class="button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+          </div>
+
+        </div>
+
+          <div class="paperpage-showcase-wrap">
+            <div class="paperpage-teaser-frame">
+              <img src="assets/figures/vlm_fix_four_games.png?v=ecf61d53d7" alt="Project teaser figure">
+            </div>
+          </div>
+
+
+          <div class="paperpage-summary-wrap">
+            <p class="paperpage-summary">Large vision-language models (VLMs) often rely on familiar semantic priors, but existing evaluations do not cleanly separate perception failures from rule-mapping failures. We study this behavior as semantic fixation: preserving a default interpretation even when the prompt specifies an alternative, equally valid mapping.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="section paperpage-abstract">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>Large vision-language models (VLMs) often rely on familiar semantic priors, but existing evaluations do not cleanly separate perception failures from rule-mapping failures. We study this behavior as semantic fixation: preserving a default interpretation even when the prompt specifies an alternative, equally valid mapping. To isolate this effect, we introduce VLM-Fix, a controlled benchmark over four abstract strategy games that evaluates identical terminal board states under paired standard and inverse rule formulations. Across 14 open and closed VLMs, accuracy consistently favors standard rules, revealing a robust semantic-fixation gap. Prompt interventions support this mechanism: neutral alias prompts substantially narrow the inverse-rule gap, while semantically loaded aliases reopen it. Post-training is strongly rule-aligned: training on one rule improves same-rule transfer but hurts opposite-rule transfer, while joint-rule training improves broader transfer. To test external validity beyond synthetic games, we evaluate analogous defamiliarization interventions on VLMBias and observe the same qualitative pattern. Finally, late-layer activation steering partially recovers degraded performance, indicating that semantic-fixation errors are at least partly editable in late representations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <section class="section paperpage-story">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">VLM-Fix Benchmark</h2>
+            <div class="paperpage-story-stack">
+                  <div class="paperpage-visual-stack">
+                      <div class="paperpage-gallery-card paperpage-gallery-card--wide">
+                        <img src="assets/figures/vlm_fix_examples_appendix.png?v=2dbc417abd" alt="VLM-Fix Benchmark">
+                      </div>
+                  </div>
+              <div class="paperpage-story-text paperpage-story-text--stacked">
+                <p>VLM-Fix is a controlled benchmark over Tic-Tac-Toe, Reversi, Connect Four, and Dots and Boxes. Each of the 300 terminal states per game is reused under paired standard and inverse rules, so the visual evidence stays fixed while the semantic interpretation changes. The benchmark also varies rendering and prompt framing separately, allowing the experiments to isolate semantic remapping failures from ordinary perception errors.</p>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="section paperpage-story">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">Baseline Performance</h2>
+            <div class="paperpage-story-stack">
+                  <div class="paperpage-visual-stack">
+                      <div class="paperpage-gallery-card paperpage-gallery-card--wide">
+                        <img src="assets/figures/vlm_fix_direct_core.png?v=f497227dda" alt="Baseline Performance">
+                      </div>
+                  </div>
+              <div class="paperpage-story-text paperpage-story-text--stacked">
+                <p>The main semantic-fixation result is a large standard-versus-inverse gap on identical terminal boards. Averaged across games and models, accuracy is 67.1% under standard rules but 52.5% under inverse rules, a 14.6-point gap. The drop appears in all four games, is largest for Dots and Boxes (73.8% versus 50.0%), and 13 of the 14 evaluated models perform worse on inverse rules.</p>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="section paperpage-story">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">Input Interventions</h2>
+            <div class="paperpage-story-stack">
+                  <div class="paperpage-visual-stack">
+                      <div class="paperpage-gallery-card paperpage-gallery-card--wide">
+                        <img src="assets/figures/vlm_fix_direct_interventions.png?v=8b90ecb123" alt="Input Interventions">
+                      </div>
+                  </div>
+              <div class="paperpage-story-text paperpage-story-text--stacked">
+                <p>Semantic framing matters more than visual perturbation. Neutral Alias prompts raise inverse-rule accuracy to 63.08% and reduce the average standard-inverse gap to 2.29 points, while SemAlias drops inverse accuracy back to 53.51% and reopens the gap. Glyph and Checkerboard yield only modest changes, which supports the view that the main failures are driven by semantic priors rather than weak perception.</p>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="section paperpage-story">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">External Validity on VLMBias</h2>
+            <div class="paperpage-story-stack">
+                  <div class="paperpage-visual-stack">
+                      <div class="paperpage-gallery-card paperpage-gallery-card--wide">
+                        <img src="assets/figures/vlms_are_biased_four_subsets.png?v=5afa29c11a" alt="External Validity on VLMBias">
+                      </div>
+                      <div class="paperpage-gallery-card paperpage-gallery-card--wide">
+                        <img src="assets/figures/vlms_are_biased_aggregate_summary.png?v=d4cf0e3e40" alt="External Validity on VLMBias">
+                      </div>
+                  </div>
+              <div class="paperpage-story-text paperpage-story-text--stacked">
+                <p>The same qualitative pattern transfers to VLMBias. Across the four counting subsets, Flip and Alias each help on their own, and Flip+Alias is strongest overall, improving accuracy from 11.6% to 20.7% and reducing bias from 76.7% to 58.9%. The largest task-level gain appears on Animals, where accuracy rises from 3.6% to 22.2%.</p>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="section paperpage-story">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">Post-Training Setup</h2>
+          <div class="columns is-vcentered is-variable is-3 paperpage-story-block paperpage-story-block--tight">
+            <div class="column is-6-desktop">
+                  <div class="paperpage-gallery-card">
+                      <img src="assets/figures/synth_legs_examples.png?v=4e2baa86f1" alt="Post-Training Setup">
+                  </div>
+            </div>
+            <div class="column is-6-desktop">
+                <div class="paperpage-story-text">
+                  <p>We study two post-training approaches, supervised fine-tuning and RLVR, in two transfer settings. Within VLM-Fix, D1--D3 probe rule-conditional and cross-game transfer under supervised fine-tuning and RLVR. For VLMBias, we also train on a synthetic leg-count dataset of procedurally rendered birds and quadrupeds and then evaluate transfer to the Animals subset, which provides a more natural counting testbed than the synthetic games alone.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section paperpage-story">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">Post-Training Results</h2>
+            <div class="paperpage-story-stack">
+                  <div class="paperpage-gallery-grid paperpage-gallery-grid--top">
+                      <div class="paperpage-gallery-card">
+                        <img src="assets/figures/qwen25vl7b_base_sft_rlvr_d123.png?v=8cbf5fc3b0" alt="Post-Training Results">
+                      </div>
+                      <div class="paperpage-gallery-card">
+                        <img src="assets/figures/qwen25vl7b_base_sft_rlvr_vlmsbias_counting4.png?v=7e25e9a918" alt="Post-Training Results">
+                      </div>
+                  </div>
+              <div class="paperpage-story-text paperpage-story-text--stacked">
+                <p>The post-training results are strongly conditional on the training signal. On the VLM-Fix D1--D3 splits, post-training improves same-rule transfer but hurts opposite-rule transfer, while joint-rule training improves held-out cross-game transfer when both mappings are seen during training. On VLMBias, synthetic leg-count training yields the clearest gains on the difficult Animals slice, where the targeted counting behavior improves substantially more than the easier non-animal categories.</p>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="section paperpage-story">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">Activation Steering</h2>
+            <div class="paperpage-story-stack">
+                  <div class="paperpage-gallery-grid paperpage-gallery-grid--top">
+                      <div class="paperpage-gallery-card">
+                        <img src="assets/figures/mech_qwen25vl7b_vlmfix_4games_combined.png?v=78f190df99" alt="Activation Steering">
+                      </div>
+                      <div class="paperpage-gallery-card">
+                        <img src="assets/figures/mech_qwen_synthlegs_sft_to_base_animals_combined.png?v=8137d7c6f0" alt="Activation Steering">
+                      </div>
+                  </div>
+              <div class="paperpage-story-text paperpage-story-text--stacked">
+                <p>Activation steering provides a complementary editability result without retraining. On VLM-Fix, late-layer donor steering improves patched accuracy when routing is reliable, with the strongest gains in Reversi and Dots and Boxes. On VLMBias Animals, steering from synthetic-leg SFT donors into the corresponding base model also improves the targeted counting behavior, showing that the relevant representations remain partly editable in later layers.</p>
+              </div>
+            </div>
+        </div>
+      </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="paperpage-bibtex-header">
+          <h2 class="title is-3">BibTeX</h2>
+          <button class="button is-light is-small paperpage-copy-btn" onclick="copyBibTeX()">
+            <span class="icon"><i class="fas fa-copy"></i></span>
+            <span>Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@article{alam2026beyond,
+  title={Beyond Perception Errors: Semantic Fixation in Large Vision-Language Models},
+  author={Md Tanvirul Alam},
+  year={2026},
+}</code></pre>
+      </div>
+    </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was generated with <strong>paperpage</strong> and is styled after the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="static/index.js?v=5d306058b4"></script>
+</body>
+</html>

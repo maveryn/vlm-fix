@@ -1,0 +1,212 @@
+{
+  "total_examples": 1200,
+  "tasks": {
+    "Tic-Tac-Toe": 300,
+    "Reversi": 300,
+    "Connect Four": 300,
+    "Dots and Boxes": 300
+  },
+  "prompt_families": [
+    "Base",
+    "Alias",
+    "SemAlias"
+  ],
+  "accuracy_breakdown": [
+    {
+      "prompt_family": "Base",
+      "rule_variant": "standard",
+      "rule_label": "Standard",
+      "models": {
+        "GPT-5.2": {
+          "correct": 1056,
+          "total": 1200,
+          "accuracy": 0.88
+        },
+        "Molmo2 4B": {
+          "correct": 834,
+          "total": 1200,
+          "accuracy": 0.695
+        },
+        "Molmo2 8B": {
+          "correct": 908,
+          "total": 1200,
+          "accuracy": 0.7566666666666667
+        },
+        "Qwen3-VL 32B": {
+          "correct": 986,
+          "total": 1200,
+          "accuracy": 0.8216666666666667
+        }
+      }
+    },
+    {
+      "prompt_family": "Base",
+      "rule_variant": "inverse",
+      "rule_label": "Inverse",
+      "models": {
+        "GPT-5.2": {
+          "correct": 917,
+          "total": 1200,
+          "accuracy": 0.7641666666666667
+        },
+        "Molmo2 4B": {
+          "correct": 288,
+          "total": 1200,
+          "accuracy": 0.24
+        },
+        "Molmo2 8B": {
+          "correct": 598,
+          "total": 1200,
+          "accuracy": 0.49833333333333335
+        },
+        "Qwen3-VL 32B": {
+          "correct": 627,
+          "total": 1200,
+          "accuracy": 0.5225
+        }
+      }
+    },
+    {
+      "prompt_family": "Alias",
+      "rule_variant": "standard",
+      "rule_label": "Standard",
+      "models": {
+        "GPT-5.2": {
+          "correct": 1057,
+          "total": 1200,
+          "accuracy": 0.8808333333333334
+        },
+        "Molmo2 4B": {
+          "correct": 846,
+          "total": 1200,
+          "accuracy": 0.705
+        },
+        "Molmo2 8B": {
+          "correct": 898,
+          "total": 1200,
+          "accuracy": 0.7483333333333333
+        },
+        "Qwen3-VL 32B": {
+          "correct": 998,
+          "total": 1200,
+          "accuracy": 0.8316666666666667
+        }
+      }
+    },
+    {
+      "prompt_family": "Alias",
+      "rule_variant": "inverse",
+      "rule_label": "Inverse",
+      "models": {
+        "GPT-5.2": {
+          "correct": 941,
+          "total": 1200,
+          "accuracy": 0.7841666666666667
+        },
+        "Molmo2 4B": {
+          "correct": 604,
+          "total": 1200,
+          "accuracy": 0.5033333333333333
+        },
+        "Molmo2 8B": {
+          "correct": 781,
+          "total": 1200,
+          "accuracy": 0.6508333333333334
+        },
+        "Qwen3-VL 32B": {
+          "correct": 756,
+          "total": 1200,
+          "accuracy": 0.63
+        }
+      }
+    },
+    {
+      "prompt_family": "SemAlias",
+      "rule_variant": "standard",
+      "rule_label": "Standard",
+      "models": {
+        "GPT-5.2": {
+          "correct": 1063,
+          "total": 1200,
+          "accuracy": 0.8858333333333334
+        },
+        "Molmo2 4B": {
+          "correct": 847,
+          "total": 1200,
+          "accuracy": 0.7058333333333333
+        },
+        "Molmo2 8B": {
+          "correct": 880,
+          "total": 1200,
+          "accuracy": 0.7333333333333333
+        },
+        "Qwen3-VL 32B": {
+          "correct": 1007,
+          "total": 1200,
+          "accuracy": 0.8391666666666666
+        }
+      }
+    },
+    {
+      "prompt_family": "SemAlias",
+      "rule_variant": "inverse",
+      "rule_label": "Inverse",
+      "models": {
+        "GPT-5.2": {
+          "correct": 898,
+          "total": 1200,
+          "accuracy": 0.7483333333333333
+        },
+        "Molmo2 4B": {
+          "correct": 395,
+          "total": 1200,
+          "accuracy": 0.32916666666666666
+        },
+        "Molmo2 8B": {
+          "correct": 610,
+          "total": 1200,
+          "accuracy": 0.5083333333333333
+        },
+        "Qwen3-VL 32B": {
+          "correct": 541,
+          "total": 1200,
+          "accuracy": 0.4508333333333333
+        }
+      }
+    }
+  ],
+  "models": [
+    "GPT-5.2",
+    "Molmo2 4B",
+    "Molmo2 8B",
+    "Qwen3-VL 32B"
+  ],
+  "model_summary": {
+    "GPT-5.2": {
+      "correct": 5932,
+      "total": 7200,
+      "accuracy": 0.8238888888888889
+    },
+    "Molmo2 4B": {
+      "correct": 3814,
+      "total": 7200,
+      "accuracy": 0.5297222222222222
+    },
+    "Molmo2 8B": {
+      "correct": 4675,
+      "total": 7200,
+      "accuracy": 0.6493055555555556
+    },
+    "Qwen3-VL 32B": {
+      "correct": 4915,
+      "total": 7200,
+      "accuracy": 0.6826388888888889
+    }
+  },
+  "default_compare_models": [
+    "GPT-5.2",
+    "Molmo2 4B",
+    "Molmo2 8B",
+    "Qwen3-VL 32B"
+  ]
+}
