@@ -6,6 +6,7 @@ dataset workflows released alongside it.
 
 <p align="center">
   <a href="https://maveryn.github.io/vlm-fix/"><img alt="Project Page" src="https://img.shields.io/badge/Project-Page-14324a?style=for-the-badge"></a>
+  <a href="https://arxiv.org/abs/2604.12119"><img alt="Paper" src="https://img.shields.io/badge/arXiv-2604.12119-b31b1b?style=for-the-badge"></a>
   <a href="https://huggingface.co/datasets/maveryn/vlm-fix"><img alt="Dataset" src="https://img.shields.io/badge/HuggingFace-Dataset-f59e0b?style=for-the-badge"></a>
   <a href="https://maveryn.github.io/vlm-fix/demo/"><img alt="Demo" src="https://img.shields.io/badge/Interactive-Demo-2563eb?style=for-the-badge"></a>
 </p>
@@ -20,6 +21,7 @@ dataset workflows released alongside it.
 | --- | --- |
 | Project page | https://maveryn.github.io/vlm-fix/ |
 | Interactive demo | https://maveryn.github.io/vlm-fix/demo/ |
+| Paper | https://arxiv.org/abs/2604.12119 |
 | Dataset | https://huggingface.co/datasets/maveryn/vlm-fix |
 
 ## Repository Layout

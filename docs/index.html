@@ -53,6 +53,14 @@
                   </a>
                 </span>
                 <span class="link-block">
+                  <a href="https://arxiv.org/abs/2604.12119" class="button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-link"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
                   <a href="https://huggingface.co/datasets/maveryn/vlm-fix" class="button is-normal is-rounded is-dark">
                     <span class="icon">
                         <i class="fas fa-database"></i>
@@ -97,11 +105,12 @@
         <div class="container is-max-desktop">
           <h2 class="title is-3">VLM-Fix Benchmark</h2>
             <div class="paperpage-story-stack">
-                  <div class="paperpage-visual-stack">
-                      <div class="paperpage-gallery-card paperpage-gallery-card--wide">
-                        <img src="assets/figures/vlm_fix_examples_appendix.png?v=2dbc417abd" alt="VLM-Fix Benchmark">
-                      </div>
-                  </div>
+                    <div class="paperpage-visual-stack">
+          <div class="paperpage-gallery-card paperpage-gallery-card--wide">
+            <img src="assets/figures/vlm_fix_examples_appendix.png?v=2dbc417abd" alt="VLM-Fix Benchmark">
+          </div>
+      </div>
+
               <div class="paperpage-story-text paperpage-story-text--stacked">
                 <p>VLM-Fix is a controlled benchmark over Tic-Tac-Toe, Reversi, Connect Four, and Dots and Boxes. Each of the 300 terminal states per game is reused under paired standard and inverse rules, so the visual evidence stays fixed while the semantic interpretation changes. The benchmark also varies rendering and prompt framing separately, allowing the experiments to isolate semantic remapping failures from ordinary perception errors.</p>
               </div>
@@ -112,11 +121,12 @@
         <div class="container is-max-desktop">
           <h2 class="title is-3">Baseline Performance</h2>
             <div class="paperpage-story-stack">
-                  <div class="paperpage-visual-stack">
-                      <div class="paperpage-gallery-card paperpage-gallery-card--wide">
-                        <img src="assets/figures/vlm_fix_direct_core.png?v=f497227dda" alt="Baseline Performance">
-                      </div>
-                  </div>
+                    <div class="paperpage-visual-stack">
+          <div class="paperpage-gallery-card paperpage-gallery-card--wide">
+            <img src="assets/figures/vlm_fix_direct_core.png?v=f497227dda" alt="Baseline Performance">
+          </div>
+      </div>
+
               <div class="paperpage-story-text paperpage-story-text--stacked">
                 <p>The main semantic-fixation result is a large standard-versus-inverse gap on identical terminal boards. Averaged across games and models, accuracy is 67.1% under standard rules but 52.5% under inverse rules, a 14.6-point gap. The drop appears in all four games, is largest for Dots and Boxes (73.8% versus 50.0%), and 13 of the 14 evaluated models perform worse on inverse rules.</p>
               </div>
@@ -127,11 +137,12 @@
         <div class="container is-max-desktop">
           <h2 class="title is-3">Input Interventions</h2>
             <div class="paperpage-story-stack">
-                  <div class="paperpage-visual-stack">
-                      <div class="paperpage-gallery-card paperpage-gallery-card--wide">
-                        <img src="assets/figures/vlm_fix_direct_interventions.png?v=8b90ecb123" alt="Input Interventions">
-                      </div>
-                  </div>
+                    <div class="paperpage-visual-stack">
+          <div class="paperpage-gallery-card paperpage-gallery-card--wide">
+            <img src="assets/figures/vlm_fix_direct_interventions.png?v=8b90ecb123" alt="Input Interventions">
+          </div>
+      </div>
+
               <div class="paperpage-story-text paperpage-story-text--stacked">
                 <p>Semantic framing matters more than visual perturbation. Neutral Alias prompts raise inverse-rule accuracy to 63.08% and reduce the average standard-inverse gap to 2.29 points, while SemAlias drops inverse accuracy back to 53.51% and reopens the gap. Glyph and Checkerboard yield only modest changes, which supports the view that the main failures are driven by semantic priors rather than weak perception.</p>
               </div>
@@ -142,14 +153,15 @@
         <div class="container is-max-desktop">
           <h2 class="title is-3">External Validity on VLMBias</h2>
             <div class="paperpage-story-stack">
-                  <div class="paperpage-visual-stack">
-                      <div class="paperpage-gallery-card paperpage-gallery-card--wide">
-                        <img src="assets/figures/vlms_are_biased_four_subsets.png?v=5afa29c11a" alt="External Validity on VLMBias">
-                      </div>
-                      <div class="paperpage-gallery-card paperpage-gallery-card--wide">
-                        <img src="assets/figures/vlms_are_biased_aggregate_summary.png?v=d4cf0e3e40" alt="External Validity on VLMBias">
-                      </div>
-                  </div>
+                    <div class="paperpage-visual-stack">
+          <div class="paperpage-gallery-card paperpage-gallery-card--wide">
+            <img src="assets/figures/vlms_are_biased_four_subsets.png?v=5afa29c11a" alt="External Validity on VLMBias">
+          </div>
+          <div class="paperpage-gallery-card paperpage-gallery-card--wide">
+            <img src="assets/figures/vlms_are_biased_aggregate_summary.png?v=d4cf0e3e40" alt="External Validity on VLMBias">
+          </div>
+      </div>
+
               <div class="paperpage-story-text paperpage-story-text--stacked">
                 <p>The same qualitative pattern transfers to VLMBias. Across the four counting subsets, Flip and Alias each help on their own, and Flip+Alias is strongest overall, improving accuracy from 11.6% to 20.7% and reducing bias from 76.7% to 58.9%. The largest task-level gain appears on Animals, where accuracy rises from 3.6% to 22.2%.</p>
               </div>
@@ -161,9 +173,10 @@
           <h2 class="title is-3">Post-Training Setup</h2>
           <div class="columns is-vcentered is-variable is-3 paperpage-story-block paperpage-story-block--tight">
             <div class="column is-6-desktop">
-                  <div class="paperpage-gallery-card">
-                      <img src="assets/figures/synth_legs_examples.png?v=4e2baa86f1" alt="Post-Training Setup">
-                  </div>
+                      <div class="paperpage-gallery-card">
+        <img src="assets/figures/synth_legs_examples.png?v=4e2baa86f1" alt="Post-Training Setup">
+      </div>
+
             </div>
             <div class="column is-6-desktop">
                 <div class="paperpage-story-text">
@@ -177,14 +190,15 @@
         <div class="container is-max-desktop">
           <h2 class="title is-3">Post-Training Results</h2>
             <div class="paperpage-story-stack">
-                  <div class="paperpage-gallery-grid paperpage-gallery-grid--top">
-                      <div class="paperpage-gallery-card">
-                        <img src="assets/figures/qwen25vl7b_base_sft_rlvr_d123.png?v=8cbf5fc3b0" alt="Post-Training Results">
-                      </div>
-                      <div class="paperpage-gallery-card">
-                        <img src="assets/figures/qwen25vl7b_base_sft_rlvr_vlmsbias_counting4.png?v=7e25e9a918" alt="Post-Training Results">
-                      </div>
-                  </div>
+                    <div class="paperpage-gallery-grid paperpage-gallery-grid--top">
+          <div class="paperpage-gallery-card">
+            <img src="assets/figures/qwen25vl7b_base_sft_rlvr_d123.png?v=8cbf5fc3b0" alt="Post-Training Results">
+          </div>
+          <div class="paperpage-gallery-card">
+            <img src="assets/figures/qwen25vl7b_base_sft_rlvr_vlmsbias_counting4.png?v=7e25e9a918" alt="Post-Training Results">
+          </div>
+      </div>
+
               <div class="paperpage-story-text paperpage-story-text--stacked">
                 <p>The post-training results are strongly conditional on the training signal. On the VLM-Fix D1--D3 splits, post-training improves same-rule transfer but hurts opposite-rule transfer, while joint-rule training improves held-out cross-game transfer when both mappings are seen during training. On VLMBias, synthetic leg-count training yields the clearest gains on the difficult Animals slice, where the targeted counting behavior improves substantially more than the easier non-animal categories.</p>
               </div>
@@ -195,14 +209,15 @@
         <div class="container is-max-desktop">
           <h2 class="title is-3">Activation Steering</h2>
             <div class="paperpage-story-stack">
-                  <div class="paperpage-gallery-grid paperpage-gallery-grid--top">
-                      <div class="paperpage-gallery-card">
-                        <img src="assets/figures/mech_qwen25vl7b_vlmfix_4games_combined.png?v=78f190df99" alt="Activation Steering">
-                      </div>
-                      <div class="paperpage-gallery-card">
-                        <img src="assets/figures/mech_qwen_synthlegs_sft_to_base_animals_combined.png?v=8137d7c6f0" alt="Activation Steering">
-                      </div>
-                  </div>
+                    <div class="paperpage-gallery-grid paperpage-gallery-grid--top">
+          <div class="paperpage-gallery-card">
+            <img src="assets/figures/mech_qwen25vl7b_vlmfix_4games_combined.png?v=78f190df99" alt="Activation Steering">
+          </div>
+          <div class="paperpage-gallery-card">
+            <img src="assets/figures/mech_qwen_synthlegs_sft_to_base_animals_combined.png?v=8137d7c6f0" alt="Activation Steering">
+          </div>
+      </div>
+
               <div class="paperpage-story-text paperpage-story-text--stacked">
                 <p>Activation steering provides a complementary editability result without retraining. On VLM-Fix, late-layer donor steering improves patched accuracy when routing is reliable, with the strongest gains in Reversi and Dots and Boxes. On VLMBias Animals, steering from synthetic-leg SFT donors into the corresponding base model also improves the targeted counting behavior, showing that the relevant representations remain partly editable in later layers.</p>
               </div>
